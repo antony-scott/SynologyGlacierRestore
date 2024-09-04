@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Amazon Glacier is a very cost-effective service to store off-site backups. Older Synology storage devices had a convenient built-in feature that lets users transparently backup to Glacier, and I have used that for quite some time. Newer ones might still have it, but I currently don't have a device to verify that.
+Amazon Glacier is a very cost-effective service to store off-site backups. Older Synology storage devices had a convenientbuilt-in feature that lets users transparently backup to Glacier, and I have used that for quite some time. Newer ones might still have it, but I currently don't have a device to verify that.
 
 Due to some lack of planning on my side, I actually never checked to see HOW that system worked. Turns out that, during the backup process, filenames are rewritten and that the original directory hierarchy is flattened. 
 
@@ -29,6 +29,6 @@ dstdir = 'C:/Users/Kees/Pictures/'
 mapping = 'mapping.sqlite3'
 ```
 
-3) Run the script. The original directory hierarchy will be recreated under `dstdir`.
+3) Run the script. The original directory hierarchy will be recreated under `dstdir`. Each share will be created in a folder of the same name.
 
-NOTE: I have not looked to see if I could change the metadata of the filename to reflect original dates and times. I might do that some other time.
+Note: the mapping sqlite db is assumed to be in the frmdir
